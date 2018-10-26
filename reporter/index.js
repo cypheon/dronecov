@@ -64,7 +64,7 @@ main({
   server: process.env.PLUGIN_SERVER,
   repo: process.env.DRONE_REPO,
   branch: process.env.DRONE_COMMIT_BRANCH,
-  token: process.env.PLUGIN_ACCESS_TOKEN,
+  token: process.env.DRONECOV_ACCESS_TOKEN,
   build_number: process.env.DRONE_BUILD_NUMBER,
   info_filename: process.env.PLUGIN_LCOV_INFO,
 }).catch((error) => {
