@@ -34,7 +34,7 @@ function main(config) {
     };
     log.info("info file parsed", {summary});
 
-    log.info(`upload summary to ${target}`);
+    log.info(`upload summary to ${target} using access token ${config.token.substr(0, 5)}...`);
     return fetch(target, {
       method: 'POST',
       headers: {
