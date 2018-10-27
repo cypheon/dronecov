@@ -29,7 +29,7 @@ Set custom thresholds for error (red) and warning (orange): `http://localhost:50
 
 In `.drone.yml`:
 ```yaml
-pipeline
+pipeline:
 
   # Your other steps ...
 
