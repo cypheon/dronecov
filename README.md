@@ -2,7 +2,7 @@
 
 The server has exactly 2 features:
  * Receive POSTed coverage summary results and store them per repo/branch
- * Provide badge SVGs with the current coverage. With color bassed on current
+ * Provide badge SVGs with the current coverage. With color based on current
    coverage.
 
 
