@@ -41,7 +41,7 @@ pipeline:
 ```
 
 
-# Develpment
+# Development
 
 Run development server:
 
