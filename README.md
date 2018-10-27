@@ -1,7 +1,7 @@
 # Lighweight Coverage Tracking Server for Drone CI
 
 The server has exactly 2 features:
- * Receive POSTed coverage summary results adn store them per repo/branch
+ * Receive POSTed coverage summary results and store them per repo/branch
  * Provide badge SVGs with the current coverage. With color bassed on current
    coverage.
 
@@ -36,7 +36,7 @@ pipeline:
   coverage:
     image: cypheon/dronecov
     secrets: [ dronecov_access_token ]
-    lcov_info: ./path/to/coverage/total.info
+    lcov_info: './path/to/coverage/total.info'
     server: https://your.coverage.server.example.com/dronecov-server/base-url/
 ```
 
