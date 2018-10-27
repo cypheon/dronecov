@@ -1,9 +1,12 @@
 # Lighweight Coverage Tracking Server for Drone CI
 
-This is the target server, where the coverage reporter can post test results.
+The server has exactly 2 features:
+ * Receive POSTed coverage summary results adn store them per repo/branch
+ * Provide badge SVGs with the current coverage. With color bassed on current
+   coverage.
 
 
-# Running
+# Running the Server
 
     pipenv install
 
@@ -15,6 +18,27 @@ This is the target server, where the coverage reporter can post test results.
 
     # Generate access token
     pipenv run ./dronecov.py token username "Token Name / Description"
+
+
+SVGs are available at: `http://localhost:5000/<username>/<reponame>/<branch>/coverage.svg`
+
+Set custom thresholds for error (red) and warning (orange): `http://localhost:5000/<username>/<reponame>/<branch>/coverage.svg?error=60&warn=80`
+
+
+# Using the Reporter Plugin in Drone CI
+
+In `.drone.yml`:
+```yaml
+pipeline
+
+  # Your other steps ...
+
+  coverage:
+    image: cypheon/dronecov
+    secrets: [ dronecov_access_token ]
+    lcov_info: ./path/to/coverage/total.info
+    server: https://your.coverage.server.example.com/dronecov-server/base-url/
+```
 
 
 # Develpment
