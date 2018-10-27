@@ -1,0 +1,33 @@
+---
+test_name: Access without token and with invalid token is rejectd
+
+stages:
+  - name: POST without token
+
+    request:
+      url: '{host}/testuser/testrepo/master/coverage'
+      method: POST
+      headers:
+        content-type: application/json
+      json:
+        coverage_total: 50
+        build_number: 50
+
+    response:
+      status_code: 401
+
+
+  - name: POST with invlaid token
+
+    request:
+      url: '{host}/testuser/testrepo/master/coverage'
+      method: POST
+      headers:
+        content-type: application/json
+        authorization: 'Bearer zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz'
+      json:
+        coverage_total: 50
+        build_number: 50
+
+    response:
+      status_code: 403

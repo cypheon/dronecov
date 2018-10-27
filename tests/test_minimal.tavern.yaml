@@ -1,0 +1,67 @@
+---
+test_name: POST coverage report and verify returned SVG
+
+stages:
+  - name: post initial coverage
+
+    request:
+      url: '{host}/testuser/testrepo/master/coverage'
+      method: POST
+      headers:
+        content-type: application/json
+        authorization: 'Bearer {tavern.env_vars.ACCESS_TOKEN}'
+      json:
+        coverage_total: 42.3
+        build_number: 18
+
+    response:
+      status_code: 201
+
+  - name: verify returned coverage is correct
+
+    request:
+      url: '{host}/testuser/testrepo/master/coverage.svg'
+      method: GET
+
+    response:
+      status_code: 200
+      headers:
+        content-type: image/svg+xml;charset=utf-8
+      body:
+        $ext:
+          function: tests.utils:validate_svg
+          extra_kwargs:
+            coverage: "42.3"
+
+
+  - name: update coverage
+
+    request:
+      url: '{host}/testuser/testrepo/master/coverage'
+      method: POST
+      headers:
+        content-type: application/json
+        authorization: 'Bearer {tavern.env_vars.ACCESS_TOKEN}'
+      json:
+        coverage_total: 2.311
+        build_number: 19
+
+    response:
+      status_code: 201
+
+  - name: verify updated coverage is returned correctly
+
+    request:
+      url: '{host}/testuser/testrepo/master/coverage.svg'
+      method: GET
+
+    response:
+      status_code: 200
+      headers:
+        content-type: image/svg+xml;charset=utf-8
+      body:
+        $ext:
+          function: tests.utils:validate_svg
+          extra_kwargs:
+            coverage: "2.31"
+

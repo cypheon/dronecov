@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="{{w1+w2}}" height="20">
+  <linearGradient id="b" x2="0" y2="100%">
+    <stop offset="0" stop-color="#bbb" stop-opacity=".1"/>
+    <stop offset="1" stop-opacity=".1"/>
+  </linearGradient>
+  <clipPath id="a">
+    <rect width="{{w1+w2}}" height="20" rx="3" fill="#fff"/>
+  </clipPath>
+  <g clip-path="url(#a)">
+    <path fill="#555" d="M0 0h{{w1}}v20H0z"/>
+    <path fill="{{color}}" d="M{{w1}} 0h{{w2}}v20H{{w1}}z"/>
+    <path fill="url(#b)" d="M0 0h{{w1+w2}}v20H0z"/>
+  </g>
+  <g fill="#fff" text-anchor="middle" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="110">
+    <text x="{{w1*5}}" y="150" fill="#010101" fill-opacity=".3" transform="scale(.1)" >coverage</text>
+    <text x="{{w1*5}}" y="140" transform="scale(.1)" >coverage</text>
+    <text text-anchor="end" x="{{(w1+w2-pad) * 10}}" y="150" fill="#010101" fill-opacity=".3" transform="scale(.1)" >{{coverage}}</text>
+    <text text-anchor="end" x="{{(w1+w2-pad) * 10}}" y="140" transform="scale(.1)" >{{coverage}}</text>
+  </g>
+</svg>

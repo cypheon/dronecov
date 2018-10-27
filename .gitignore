@@ -1,2 +1,4 @@
+/dronecov.db
 /reporter/dist/
 /reporter/node_modules/
+/tests/tmp.db
