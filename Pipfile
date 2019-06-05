@@ -5,11 +5,11 @@ name = "pypi"
 
 [packages]
 flask = ">=1.0.2"
-Flask-SQLAlchemy = ">=2.3.2"
+Flask-SQLAlchemy = ">=2.4.0"
 gunicorn = "*"
 
 [dev-packages]
-tavern = ">=0.19"
+tavern = "==0.19.1"
 
 [requires]
 python_version = "3.7"
