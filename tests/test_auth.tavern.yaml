@@ -17,7 +17,7 @@ stages:
       status_code: 401
 
 
-  - name: POST with invlaid token
+  - name: POST with invalid token
 
     request:
       url: '{host}/testuser/testrepo/master/coverage'
