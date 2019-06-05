@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "294bdf36b6cdff49299e0f182c25784f2325c7dd1aa7882d7630ac7b21ad6970"
+            "sha256": "0f0223ff2b30a80d0c657843d277cf10b023c6dc31ebbd25fce91954fc60df9a"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -123,6 +123,13 @@
             ],
             "version": "==19.1.0"
         },
+        "backports.functools-lru-cache": {
+            "hashes": [
+                "sha256:9d98697f088eb1b0fa451391f91afb5e3ebde16bbdb272819fd091151fda4f1a",
+                "sha256:f0b0e4eba956de51238e17573b7087e852dfe9854afd2e9c873f73fc0ca0a6dd"
+            ],
+            "version": "==1.5"
+        },
         "certifi": {
             "hashes": [
                 "sha256:59b7658e26ca9c7339e00f8f4636cdfe59d34fa37b9b04f6f9e9926b3cece1a5",
@@ -182,6 +189,7 @@
                 "sha256:2112d2ca570bb7c3e53ea1a35cd5df42bb0fd10c45f0fb97178679c3c03d64c7",
                 "sha256:c3e4748ba1aad8dba30a4886b0b1a2004f9a863837b8654e7059eebf727afa5a"
             ],
+            "markers": "python_version > '2.7'",
             "version": "==7.0.0"
         },
         "paho-mqtt": {
@@ -227,10 +235,11 @@
         },
         "pytest": {
             "hashes": [
-                "sha256:3f193df1cfe1d1609d4c583838bea3d532b18d6160fd3f55c9447fdca30848ec",
-                "sha256:e246cf173c01169b9617fc07264b7b1316e78d7a650055235d6d897bc80d9660"
+                "sha256:1a8aa4fa958f8f451ac5441f3ac130d9fc86ea38780dd2715e6d5c5882700b24",
+                "sha256:b8bf138592384bd4e87338cb0f256bf5f615398a649d4bd83915f0e4047a5ca6"
             ],
-            "version": "==3.10.1"
+            "index": "pypi",
+            "version": "==4.5.0"
         },
         "python-box": {
             "hashes": [
@@ -285,10 +294,10 @@
         },
         "tavern": {
             "hashes": [
-                "sha256:3564d0f059321e3699fd32d3d5c14970582f8502a6a2bc103fc81ff86f23d580"
+                "sha256:e14f9c52d96d1a1c03d822e585eb59cc2b259cdd2f9773f76021e4c791379927"
             ],
             "index": "pypi",
-            "version": "==0.19.1"
+            "version": "==0.26.4"
         },
         "urllib3": {
             "hashes": [
@@ -296,6 +305,13 @@
                 "sha256:dbe59173209418ae49d485b87d1681aefa36252ee85884c31346debd19463232"
             ],
             "version": "==1.25.3"
+        },
+        "wcwidth": {
+            "hashes": [
+                "sha256:3df37372226d6e63e1b1e1eda15c594bca98a22d33a23832a90998faa96bc65e",
+                "sha256:f4ebe71925af7b40a864553f761ed559b43544f8f71746c2d756c7fe788ade7c"
+            ],
+            "version": "==0.1.7"
         },
         "zipp": {
             "hashes": [
