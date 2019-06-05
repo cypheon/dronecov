@@ -3,6 +3,7 @@ test_name: Access without token and with invalid token is rejectd
 
 stages:
   - name: POST without token
+    id: post_without_token
 
     request:
       url: '{host}/testuser/testrepo/master/coverage'
@@ -18,6 +19,7 @@ stages:
 
 
   - name: POST with invalid token
+    id: post_invalid_token
 
     request:
       url: '{host}/testuser/testrepo/master/coverage'

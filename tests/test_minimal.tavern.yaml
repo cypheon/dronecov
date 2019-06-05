@@ -3,6 +3,7 @@ test_name: POST coverage report and verify returned SVG
 
 stages:
   - name: post initial coverage
+    id: post_initial_coverage
 
     request:
       url: '{host}/testuser/testrepo/master/coverage'
@@ -18,6 +19,7 @@ stages:
       status_code: 201
 
   - name: verify returned coverage is correct
+    id: coverage_correct
 
     request:
       url: '{host}/testuser/testrepo/master/coverage.svg'
@@ -35,6 +37,7 @@ stages:
 
 
   - name: update coverage
+    id: update_coverage
 
     request:
       url: '{host}/testuser/testrepo/master/coverage'
@@ -50,6 +53,7 @@ stages:
       status_code: 201
 
   - name: verify updated coverage is returned correctly
+    id: updated_coverage_correct
 
     request:
       url: '{host}/testuser/testrepo/master/coverage.svg'
