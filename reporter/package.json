@@ -10,11 +10,11 @@
   "author": "Johann Rudloff",
   "license": "BSD-2-Clause",
   "devDependencies": {
-    "webpack-cli": "^3.1.2",
-    "webpack": "^4.23.1"
+    "webpack": "^4.39.3",
+    "webpack-cli": "^3.3.8"
   },
   "dependencies": {
     "lcov-parse": "^1.0.0",
-    "node-fetch": "^2.2.0"
+    "node-fetch": "^2.6.0"
   }
 }
